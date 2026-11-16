@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees &amp; FAQs | Soulful Therapy · Forest of Dean</title>
+  <meta name="description" content="Transparent session fees, free 15-minute phone consultations, and answers to common questions about starting counselling with Caroline Vieira in Coleford, Forest of Dean.">
+
+  <!-- Google Fonts: Lora & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007e7c',
+            'primary-dark': '#006664',
+            'primary-light': '#009d9a',
+            tint: '#dee8e9',
+            secondary: '#dee8e9',
+            spruce: '#121c1d',
+            linen: '#f7faf9',
+            cream: '#f7faf9',
+            charcoal: '#121c1d',
+            slate: '#4a5e5d',
+            muted: '#718584'
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          borderRadius: {
+            'card': '20px',
+            '2xl': '16px',
+            '3xl': '24px'
+          },
+          boxShadow: {
+            'soft': '0 12px 35px -8px rgba(18, 28, 29, 0.08)',
+            'card': '0 8px 30px -4px rgba(0, 126, 124, 0.06), 0 2px 10px -2px rgba(18, 28, 29, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #4a5e5d;
+      background-color: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: #121c1d;
+    }
+
+    /* Accordion styles */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.active .faq-content {
+      max-height: 350px;
+    }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #007e7c;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7faf9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dee8e9;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #007e7c;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#007e7c]/20 selection:text-[#121c1d]" id="top">
+
+  <!-- ========================================================================= -->
+  <!-- FIXED NAVIGATION BAR (No Dropdown, No Layout Shifts)                       -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white border-b border-[#dee8e9] transition-all duration-300 shadow-sm" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: Logo & Two-Line Brand Text -->
+        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1">
+          <img src="logo.png" alt="Soulful Therapy Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <div class="flex flex-col leading-tight">
+            <span class="font-sans text-xs font-semibold tracking-wider text-[#121c1d] uppercase">CAROLINE VIEIRA</span>
+            <span class="font-sans text-[10px] tracking-widest text-[#4a5e5d] uppercase">FOREST OF DEAN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links: direct links, font-weight 500, whitespace-nowrap, no dropdown -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-sans text-sm font-medium whitespace-nowrap" aria-label="Main Navigation">
+          <a href="index.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Home</a>
+          <a href="counselling-services.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Services</a>
+          <a href="about-caroline.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">About Caroline</a>
+          <a href="the-cabin-studio.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">The Studio</a>
+          <a href="fees-faqs.html" class="border-b-2 border-[#007e7c] text-[#007e7c] pb-1 whitespace-nowrap transition-colors" aria-current="page">Fees &amp; FAQs</a>
+        </nav>
+
+        <!-- Right CTA: Rounded Solid Teal Pill Button -->
+        <div class="hidden sm:flex items-center">
+          <a href="contact.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-[#007e7c] text-white hover:bg-[#006866] transition-colors whitespace-nowrap shadow-sm">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-[#121c1d] hover:bg-[#f7faf9] border border-[#dee8e9] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#dee8e9] bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Home</a>
+      <a href="counselling-services.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Services</a>
+      <a href="about-caroline.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">About Caroline</a>
+      <a href="the-cabin-studio.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">The Studio</a>
+      <a href="fees-faqs.html" class="block py-2 text-sm font-medium text-[#007e7c] border-l-2 border-[#007e7c] pl-2">Fees &amp; FAQs</a>
+      <div class="pt-3">
+        <a href="contact.html" class="block text-center bg-[#007e7c] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#006866] transition-colors">Check Availability</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex-grow">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: HERO & PRICING CARD (White Background)                         -->
+    <!-- ========================================================================= -->
+    <section class="py-14 sm:py-20 lg:py-24 bg-white relative border-b border-[#dee8e9]/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-6 flex flex-col items-start space-y-6">
+            
+            <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase">
+              Transparent Pricing &amp; Reassurance
+            </p>
+
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#121c1d] leading-[1.2] tracking-tight">
+              Clear fees, no hidden costs, <span class="italic font-normal text-[#007e7c]">and no pressure.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#4a5e5d] leading-relaxed font-normal">
+              Investing in therapy is an investment in your life. Here is exactly what to expect financially and logistically.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-[#f7faf9] border border-[#dee8e9] text-sm text-[#4a5e5d]">
+              <span class="font-semibold text-[#121c1d] block mb-1">Honest, straightforward terms</span>
+              <span>You will never be asked to pay in large blocks upfront, nor locked into long contracts you don't need.</span>
+            </div>
+
+            <div class="pt-2 flex items-center gap-6 text-sm text-[#007e7c]">
+              <a href="#how-it-works" class="font-medium hover:underline flex items-center gap-1.5">
+                <span>See the 3-step process &darr;</span>
+              </a>
+              <span class="text-[#dee8e9]">&bull;</span>
+              <a href="#faqs" class="font-medium hover:underline flex items-center gap-1.5">
+                <span>Read detailed FAQs &darr;</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Central Pricing Card -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative bg-white rounded-3xl border-2 border-[#007e7c] p-8 sm:p-10 shadow-lg">
+              
+              <div class="flex items-center justify-between mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#dee8e9] text-[#007e7c] text-xs font-semibold uppercase tracking-wider">
+                  Standard Therapeutic Hour
+                </span>
+                <span class="text-xs font-semibold text-[#718584] uppercase tracking-wider">
+                  Individual Support
+                </span>
+              </div>
+
+              <div class="mb-8 pb-6 border-b border-[#dee8e9]">
+                <div class="flex items-baseline gap-2">
+                  <span class="font-serif text-5xl sm:text-6xl font-bold text-[#121c1d] tracking-tight">
+                    &pound;54
+                  </span>
+                  <span class="text-[#4a5e5d] text-base sm:text-lg font-medium">
+                    / per 50-minute session
+                  </span>
+                </div>
+                <p class="text-xs text-[#718584] mt-2 font-normal">
+                  Paid comfortably after each session by simple bank transfer.
+                </p>
+              </div>
+
+              <!-- Checklist -->
+              <div class="space-y-4 mb-8 text-sm text-[#4a5e5d]">
+                <div class="flex items-start gap-3">
+                  <span class="text-[#007e7c] font-bold">✓</span>
+                  <span><strong>Free 15-minute introductory phone call</strong> to explore your needs without obligation</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-[#007e7c] font-bold">✓</span>
+                  <span><strong>In-person at the Clements End log cabin</strong> or securely online via video</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-[#007e7c] font-bold">✓</span>
+                  <span>Appointments on <strong>Tuesdays, Wednesdays &amp; Thursdays</strong> (up to 5:30pm start)</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-[#007e7c] font-bold">✓</span>
+                  <span><strong>No long-term lock-in:</strong> work open-ended or week-by-week at your own rhythm</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-[#007e7c] font-bold">✓</span>
+                  <span>Occasional <strong>sliding-scale fees</strong> for students or low income (ask in confidence)</span>
+                </div>
+              </div>
+
+              <a href="#contact" class="w-full py-3.5 px-6 rounded-full font-medium text-white bg-[#007e7c] hover:bg-[#006664] transition-all text-sm shadow-sm flex items-center justify-center text-center">
+                Book Your Free 15-Minute Call &rarr;
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: 3-STEP PROCESS (Editorial Numbers 01, 02, 03, No Squircles)    -->
+    <!-- ========================================================================= -->
+    <section id="how-it-works" class="py-20 sm:py-24 bg-[#f7faf9] relative border-b border-[#dee8e9]/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            Simple &amp; Reassuring
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-[#121c1d] mb-4 tracking-tight">
+            How It Works: From Message to First Session
+          </h2>
+          <p class="text-base sm:text-lg text-[#4a5e5d] leading-relaxed">
+            Reaching out doesn't commit you to months of therapy. Here is the gentle, unhurried path from where you are right now.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Step 1 -->
+          <div class="bg-white rounded-2xl p-8 border border-[#dee8e9] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">01.</span>
+              <span class="text-xs text-[#718584] uppercase font-semibold block mb-1">Step One</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">
+                Send a Brief Message
+              </h3>
+              <p class="text-[#4a5e5d] text-sm leading-relaxed">
+                Fill out the simple form below. You only need to share a sentence or two about what's going on. Caroline responds personally within 24–48 hours.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#dee8e9] text-xs font-semibold text-[#007e7c]">
+              Simple, zero paperwork
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white rounded-2xl p-8 border border-[#dee8e9] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">02.</span>
+              <span class="text-xs text-[#718584] uppercase font-semibold block mb-1">Step Two</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">
+                Gentle 15-Minute Intro Call
+              </h3>
+              <p class="text-[#4a5e5d] text-sm leading-relaxed">
+                A short, no-obligation phone conversation. You can ask any questions, get a feel for Caroline's voice and approach, and decide if it feels comfortable.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#dee8e9] text-xs font-semibold text-[#007e7c]">
+              Free &amp; completely relaxed
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white rounded-2xl p-8 border border-[#dee8e9] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">03.</span>
+              <span class="text-xs text-[#718584] uppercase font-semibold block mb-1">Step Three</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">
+                First Session in the Cabin
+              </h3>
+              <p class="text-[#4a5e5d] text-sm leading-relaxed">
+                Meet at the cabin in Clements End. We unpack what brought you, agree on what you need, and you decide at your own pace whether to continue.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#dee8e9] text-xs font-semibold text-[#007e7c]">
+              You decide the rhythm
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: DETAILED FAQS                                                  -->
+    <!-- ========================================================================= -->
+    <section id="faqs" class="py-20 sm:py-24 bg-white relative border-b border-[#dee8e9]/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            Frequently Asked Questions
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-[#121c1d] mb-4 tracking-tight">
+            Every Question, Answered Honestly
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            If your question isn't answered here, you are warmly invited to ask during our initial phone call.
+          </p>
+        </div>
+
+        <div class="divide-y divide-[#dee8e9]">
+          
+          <!-- Q1 -->
+          <div class="faq-item py-4 active">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>What if I feel anxious or don't know what to say in the first session?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>That is completely normal. Most people feel nervous. You don't need a prepared speech. Caroline will guide the conversation gently, and sitting in silence for a moment is completely okay.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item py-4">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>Is everything I share strictly confidential?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>Yes. What happens in the cabin stays in the cabin. Caroline works under strict ethical guidelines. The only rare exceptions are legal requirements regarding immediate risk of serious harm, which she explains openly in session one.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item py-4">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>How many sessions do I have to commit to?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>There is no minimum commitment. Some clients find that 6 to 12 sessions provide the clarity they need. Others appreciate an open-ended therapeutic container for ongoing personal growth. You are always in control.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item py-4">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>What days can I book?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>Sessions take place on Tuesdays, Wednesdays, and Thursdays, with daytime slots and late-afternoon slots (the last session starts at 5:30pm).</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item py-4">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>Do you offer a sliding scale or concessions?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>Yes. A limited number of lower-cost places are available for students, trainee counsellors, or individuals on lower incomes. Feel free to enquire during our initial phone call in confidence.</p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item py-4">
+            <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+              <span>What is the cancellation policy?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+              <p>Because your weekly session time is kept specifically for you, 48 hours notice is requested for cancellations. We can usually arrange to switch to an online video session if unexpected travel problems arise.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: DIRECT ENQUIRY FORM STRIP                                      -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="py-20 sm:py-24 bg-[#f7faf9] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-[#121c1d] rounded-3xl text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden border border-white/10">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start relative z-10">
+            
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-[#dee8e9] mb-3">
+                  Initial Consultation
+                </p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white mb-4 leading-tight">
+                  Book Your Free 15-Minute Introductory Call
+                </h2>
+                <p class="text-[#dee8e9] text-base leading-relaxed mb-4">
+                  Tuesdays, Wednesdays &amp; Thursdays &middot; &pound;54 per counselling hour &middot; Free 15-minute phone intro call
+                </p>
+                <p class="text-white/70 text-sm leading-relaxed">
+                  No obligation, no pressure. A brief conversation to answer your questions and see if working together feels like a good fit.
+                </p>
+              </div>
+
+              <div class="pt-6 border-t border-white/15 space-y-4 text-sm text-white/80">
+                <div>
+                  <span class="text-xs text-white/50 block font-semibold uppercase tracking-wider mb-0.5">Direct Email</span>
+                  <a href="mailto:caroline.vieira108@gmail.com" class="text-white hover:text-[#007e7c] transition-colors font-medium">
+                    caroline.vieira108@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <span class="text-xs text-white/50 block font-semibold uppercase tracking-wider mb-0.5">Location</span>
+                  <span class="text-white font-medium">Clements End, Nr Coleford, GL16 8LL, Gloucestershire</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-white/[0.06] backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/15">
+              <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmission(event)">
+                <div id="form-feedback" class="hidden p-4 rounded-xl bg-[#007e7c]/30 border border-[#007e7c] text-white text-sm leading-relaxed"></div>
+
+                <div>
+                  <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-1.5">Your Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="e.g. Rachel" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#007e7c] text-sm">
+                </div>
+
+                <div>
+                  <label for="contact-info" class="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-1.5">Email Address *</label>
+                  <input type="email" id="contact-info" name="contactInfo" required placeholder="rachel@example.co.uk" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#007e7c] text-sm">
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-1.5">A little about what you are seeking</label>
+                  <textarea id="message" name="message" rows="4" required placeholder="Feel free to share as much or as little as you like..." class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#007e7c] text-sm resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-full font-medium text-white bg-[#007e7c] hover:bg-[#006664] transition-all text-sm shadow-sm">
+                  Send Confidential Message to Caroline
+                </button>
+
+                <p class="text-center text-xs text-white/60 pt-1">
+                  Your message is sent privately to Caroline and never shared.
+                </p>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- EXACT FOOTER FROM forestofdeancounselling.co.uk (Dark Spruce #121c1d)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#121c1d] text-center py-16 px-6 border-t border-[#1e2d2e]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center gap-4">
+      <!-- Header-matching Logo & Brand Lockup -->
+      <a href="index.html" class="inline-flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1 mb-1">
+        <img src="logo.png" alt="Soulful Therapy - Caroline Vieira" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div class="flex flex-col text-left leading-tight">
+          <span class="font-sans text-xs font-semibold tracking-wider text-white uppercase">CAROLINE VIEIRA</span>
+          <span class="font-sans text-[10px] tracking-widest text-[#8e9293] uppercase">FOREST OF DEAN</span>
+        </div>
+      </a>
+
+      <!-- Site Title -->
+      <p class="font-serif text-[21px] text-white tracking-wide">
+        <a href="index.html" class="hover:text-[#dee8e9] transition-colors">Soulful Therapy</a>
+      </p>
+
+      <!-- Practice Credentials & Address -->
+      <p class="text-sm text-[#8e9293] leading-relaxed max-w-2xl font-normal">
+        Soulful Therapy · Caroline Vieira, Integrative Transpersonal Psychotherapist · Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+      </p>
+
+      <!-- Email Link -->
+      <p class="text-sm">
+        <a href="mailto:caroline.vieira108@gmail.com" class="text-white underline hover:text-[#dee8e9] transition-colors">
+          caroline.vieira108@gmail.com
+        </a>
+      </p>
+
+      <!-- Copyright -->
+      <p class="text-sm text-[#8e9293] pt-2">
+        © 2026 Soulful Therapy. Integrative transpersonal psychotherapy in Coleford and the Forest of Dean.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Accordion functionality
+    document.querySelectorAll('.faq-trigger').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    function handleFormSubmission(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const form = document.getElementById('contact-form');
+      if (feedback) {
+        feedback.textContent = "Thank you. Your message has been sent to Caroline. She will be in touch shortly.";
+        feedback.classList.remove('hidden');
+        form.reset();
+      }
+    }
+  </script>
+
+</body>
+</html>

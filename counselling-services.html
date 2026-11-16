@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counselling Services | Caroline Vieira · Soulful Therapy Forest of Dean</title>
+  <meta name="description" content="Explore professional, confidential 1-to-1 counselling and soulful psychotherapy services with Caroline Vieira in Coleford, Forest of Dean and online.">
+
+  <!-- Google Fonts: Lora & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007e7c',
+            'primary-dark': '#006664',
+            'primary-light': '#009d9a',
+            tint: '#dee8e9',
+            accent: '#dee8e9',
+            spruce: '#121c1d',
+            linen: '#f7faf9',
+            charcoal: '#121c1d',
+            slate: '#4a5e5d',
+            muted: '#718584'
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          borderRadius: {
+            'card': '20px',
+            '2xl': '16px',
+            '3xl': '24px'
+          },
+          boxShadow: {
+            'soft': '0 12px 35px -8px rgba(18, 28, 29, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #4a5e5d;
+      background-color: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: #121c1d;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7faf9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dee8e9;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #007e7c;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#007e7c]/20 selection:text-[#121c1d]" id="top">
+
+  <!-- FIXED NAVIGATION BAR (No Dropdown, No Layout Shifts) -->
+  <header class="sticky top-0 z-50 bg-white border-b border-[#dee8e9] transition-all duration-300 shadow-sm" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: Logo & Two-Line Brand Text -->
+        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1">
+          <img src="logo.png" alt="Soulful Therapy Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <div class="flex flex-col leading-tight">
+            <span class="font-sans text-xs font-semibold tracking-wider text-[#121c1d] uppercase">CAROLINE VIEIRA</span>
+            <span class="font-sans text-[10px] tracking-widest text-[#4a5e5d] uppercase">FOREST OF DEAN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links: direct links, font-weight 500, whitespace-nowrap, no dropdown -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-sans text-sm font-medium whitespace-nowrap" aria-label="Main Navigation">
+          <a href="index.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Home</a>
+          <a href="counselling-services.html" class="border-b-2 border-[#007e7c] text-[#007e7c] pb-1 whitespace-nowrap transition-colors" aria-current="page">Services</a>
+          <a href="about-caroline.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">About Caroline</a>
+          <a href="the-cabin-studio.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">The Studio</a>
+          <a href="fees-faqs.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Fees &amp; FAQs</a>
+        </nav>
+
+        <!-- Right CTA: Rounded Solid Teal Pill Button -->
+        <div class="hidden sm:flex items-center">
+          <a href="contact.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-[#007e7c] text-white hover:bg-[#006866] transition-colors whitespace-nowrap shadow-sm">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-[#121c1d] hover:bg-[#f7faf9] border border-[#dee8e9] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#dee8e9] bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Home</a>
+      <a href="counselling-services.html" class="block py-2 text-sm font-medium text-[#007e7c] border-l-2 border-[#007e7c] pl-2">Services</a>
+      <a href="about-caroline.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">About Caroline</a>
+      <a href="the-cabin-studio.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">The Studio</a>
+      <a href="fees-faqs.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Fees &amp; FAQs</a>
+      <div class="pt-3">
+        <a href="contact.html" class="block text-center bg-[#007e7c] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#006866] transition-colors">Check Availability</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex-grow">
+
+    <!-- Hero Section -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 border-b border-[#dee8e9]/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-3">
+          1-to-1 Integrative &amp; Transpersonal Therapy
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-semibold text-[#121c1d] tracking-tight leading-tight mb-6">
+          Counselling Services &amp; Therapeutic Support
+        </h1>
+        <p class="text-base sm:text-lg text-[#4a5e5d] leading-relaxed max-w-2xl mx-auto mb-8">
+          A compassionate, non-judgmental space to explore what hurts, untangle deep-seated patterns, and rediscover your ground. Offered in-person at the Clements End log cabin and online across the UK.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 text-xs text-[#4a5e5d]">
+          <span class="bg-[#f7faf9] border border-[#dee8e9] px-4 py-1.5 rounded-full">50 Therapeutic Minutes</span>
+          <span class="bg-[#f7faf9] border border-[#dee8e9] px-4 py-1.5 rounded-full">£54 Per Session</span>
+          <span class="bg-[#f7faf9] border border-[#dee8e9] px-4 py-1.5 rounded-full">Free 15-Minute Intro Call</span>
+          <span class="bg-[#f7faf9] border border-[#dee8e9] px-4 py-1.5 rounded-full">BACP Registered</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Areas of Support (Clean High-Breathing-Room Cards, No Icon Squircles) -->
+    <section class="bg-[#f7faf9] py-16 sm:py-20 border-b border-[#dee8e9]/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            What We Can Work With
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+            Areas of Focus &amp; Deep Support
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            People come to therapy for many different reasons. Whether your feelings feel clear and sharp or vague and heavy, all of you is welcome here.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">01.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Anxiety, Panic &amp; Overwhelm</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              When constant worry, physical tension, or panic leaves you exhausted, we gently untangle the triggers beneath the nervous system and build tools for steady ground.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">02.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Low Mood &amp; Depression</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Feeling flat, hopeless, or disconnected from life. Rather than forcing toxic positivity, we explore what your depression might be trying to communicate about your needs.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">03.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Trauma &amp; Painful Memories</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Carrying childhood wounds, emotional neglect, or single-incident shocks. We work safely and at your pace, ensuring you remain anchored in the present without overwhelm.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">04.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Relationship Patterns</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Repeating cycles with partners, boundary struggles with family, or feelings of isolation. We look at relational templates and help you build genuine closeness with healthy limits.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">05.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Grief, Loss &amp; Bereavement</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              The death of a loved one, the ending of a marriage, health changes, or loss of identity. Grief takes its own time; here it is honoured and given full room to breathe.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+            <span class="font-serif text-xl italic text-[#007e7c] mb-2 block">06.</span>
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Life Transitions &amp; Meaning</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Midlife questioning, retirement, career changes, or a quiet feeling that "something is missing". We tune into your inner values and what genuinely matters to your soul.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modalities & Approach -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 border-b border-[#dee8e9]/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            Integrative Methodology
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+            How We Work Together
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            Integrative transpersonal psychotherapy combines established psychological frameworks with creative and soulful insight.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="border border-[#dee8e9] rounded-2xl p-7 bg-[#f7faf9]">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-2">Relational &amp; Person-Centred</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Healing happens in relation. The safety, trust, and openness between therapist and client provide a secure base to explore vulnerable truths without fear of rejection.
+            </p>
+          </div>
+
+          <div class="border border-[#dee8e9] rounded-2xl p-7 bg-[#f7faf9]">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-2">Creative &amp; Metaphorical Expressions</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Sometimes words alone cannot capture what you feel. In the studio, I have paper, paints, pastels, and sand trays available. If you feel like you are "underwater" or "in a fog", we can work directly with those powerful images.
+            </p>
+          </div>
+
+          <div class="border border-[#dee8e9] rounded-2xl p-7 bg-[#f7faf9]">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-2">Soulful &amp; Transpersonal Perspective</h3>
+            <p class="text-sm text-[#4a5e5d] leading-relaxed">
+              Drawing on the work of Thomas Moore and James Hillman, we attend to symptoms not merely as flaws to fix, but as voices of the soul asking for closer attention, meaning, and care.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="contact.html" class="bg-[#007e7c] text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-[#006866] transition-all inline-block shadow-sm">
+            Check Caroline's Availability
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- EXACT FOOTER FROM forestofdeancounselling.co.uk (Dark Spruce #121c1d) -->
+  <footer class="bg-[#121c1d] text-center py-16 px-6 border-t border-[#1e2d2e]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center gap-4">
+      <!-- Header-matching Logo & Brand Lockup -->
+      <a href="index.html" class="inline-flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1 mb-1">
+        <img src="logo.png" alt="Soulful Therapy - Caroline Vieira" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div class="flex flex-col text-left leading-tight">
+          <span class="font-sans text-xs font-semibold tracking-wider text-white uppercase">CAROLINE VIEIRA</span>
+          <span class="font-sans text-[10px] tracking-widest text-[#8e9293] uppercase">FOREST OF DEAN</span>
+        </div>
+      </a>
+
+      <!-- Site Title -->
+      <p class="font-serif text-[21px] text-white tracking-wide">
+        <a href="index.html" class="hover:text-[#dee8e9] transition-colors">Soulful Therapy</a>
+      </p>
+
+      <!-- Practice Credentials & Address -->
+      <p class="text-sm text-[#8e9293] leading-relaxed max-w-2xl font-normal">
+        Soulful Therapy · Caroline Vieira, Integrative Transpersonal Psychotherapist · Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+      </p>
+
+      <!-- Email Link -->
+      <p class="text-sm">
+        <a href="mailto:caroline.vieira108@gmail.com" class="text-white underline hover:text-[#dee8e9] transition-colors">
+          caroline.vieira108@gmail.com
+        </a>
+      </p>
+
+      <!-- Copyright -->
+      <p class="text-sm text-[#8e9293] pt-2">
+        © 2026 Soulful Therapy. Integrative transpersonal psychotherapy in Coleford and the Forest of Dean.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulful Therapy | Caroline Vieira · Confidential 1-to-1 Counselling in Coleford, Forest of Dean</title>
+  <meta name="description" content="Confidential 1-to-1 counselling and integrative psychotherapy with Caroline Vieira in Clements End, Coleford, Forest of Dean. A quiet, welcoming woodland cabin studio for untangling what holds you back.">
+
+  <!-- Google Fonts: Lora (Warm literary serif) & Outfit (Modern clean sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007e7c',        /* Primary Teal */
+            'primary-dark': '#006664',
+            'primary-light': '#009d9a',
+            tint: '#dee8e9',           /* Soft Mineral Tint */
+            accent: '#dee8e9',
+            spruce: '#121c1d',         /* Dark Spruce */
+            linen: '#f7faf9',          /* Soft Mineral Linen */
+            charcoal: '#121c1d',       /* Deep Charcoal Headings */
+            slate: '#4a5e5d',          /* Body Text Slate */
+            muted: '#718584'
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          borderRadius: {
+            'card': '20px',
+            '2xl': '16px',
+            '3xl': '24px',
+            '4xl': '32px'
+          },
+          boxShadow: {
+            'soft': '0 12px 35px -8px rgba(18, 28, 29, 0.08)',
+            'card': '0 8px 30px -4px rgba(0, 126, 124, 0.06), 0 2px 10px -2px rgba(18, 28, 29, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #4a5e5d;
+      background-color: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: #121c1d;
+    }
+
+    /* Accordion styles */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.active .faq-content {
+      max-height: 350px;
+    }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #007e7c;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7faf9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dee8e9;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #007e7c;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#007e7c]/20 selection:text-[#121c1d]" id="top">
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 1: FIXED NAVIGATION BAR (No Dropdown, No Layout Shifts)           -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white border-b border-[#dee8e9] transition-all duration-300 shadow-sm" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: Logo & Two-Line Brand Text -->
+        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1">
+          <img src="logo.png" alt="Soulful Therapy Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <div class="flex flex-col leading-tight">
+            <span class="font-sans text-xs font-semibold tracking-wider text-[#121c1d] uppercase">CAROLINE VIEIRA</span>
+            <span class="font-sans text-[10px] tracking-widest text-[#4a5e5d] uppercase">FOREST OF DEAN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links: direct links, font-weight 500, whitespace-nowrap, no dropdown -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-sans text-sm font-medium whitespace-nowrap" aria-label="Main Navigation">
+          <a href="index.html" class="border-b-2 border-[#007e7c] text-[#007e7c] pb-1 whitespace-nowrap transition-colors" aria-current="page">Home</a>
+          <a href="counselling-services.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Services</a>
+          <a href="about-caroline.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">About Caroline</a>
+          <a href="the-cabin-studio.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">The Studio</a>
+          <a href="fees-faqs.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Fees &amp; FAQs</a>
+        </nav>
+
+        <!-- Right CTA: Rounded Solid Teal Pill Button -->
+        <div class="hidden sm:flex items-center">
+          <a href="contact.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-[#007e7c] text-white hover:bg-[#006866] transition-colors whitespace-nowrap shadow-sm">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-[#121c1d] hover:bg-[#f7faf9] border border-[#dee8e9] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#dee8e9] bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-2 text-sm font-medium text-[#007e7c] border-l-2 border-[#007e7c] pl-2">Home</a>
+      <a href="counselling-services.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Services</a>
+      <a href="about-caroline.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">About Caroline</a>
+      <a href="the-cabin-studio.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">The Studio</a>
+      <a href="fees-faqs.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Fees &amp; FAQs</a>
+      <div class="pt-3">
+        <a href="contact.html" class="block text-center bg-[#007e7c] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#006866] transition-colors">Check Availability</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex-grow">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: HERO SECTION (WHITE BG #ffffff)                                -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          
+          <!-- Left Column: Copy, CTAs, Badges -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            
+            <!-- Eyebrow -->
+            <p class="text-xs font-sans font-medium text-[#007e7c] tracking-wide mb-3 uppercase">
+              Confidential 1-to-1 Counselling Therapy in Coleford, Forest of Dean
+            </p>
+
+            <!-- H1 -->
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.2rem] font-semibold text-[#121c1d] leading-[1.18] mb-6">
+              A quiet, welcoming place to be truly heard.
+            </h1>
+
+            <!-- Paragraphs -->
+            <div class="space-y-4 text-base sm:text-[17px] text-[#4a5e5d] leading-[1.75] mb-8 max-w-2xl">
+              <p>
+                Finding the right therapist is a big step. Whether you are feeling overwhelmed by low mood, struggling with relationship patterns, or carrying the weight of past experiences, you do not have to face it alone.
+              </p>
+              <p>
+                As a BACP registered counsellor, I offer professional, confidential 1-to-1 counselling and therapy in Coleford, supporting individuals across the Forest of Dean, Monmouthshire, and surrounding areas.
+              </p>
+              <p class="text-[#121c1d] font-medium">
+                We'll go completely at your pace - together, we can untangle what's holding you back and help you find your way forward.
+              </p>
+            </div>
+
+            <!-- Buttons (side-by-side) -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10 w-full sm:w-auto">
+              <a href="#contact" class="bg-[#007e7c] text-white px-6 py-3 rounded-full text-sm font-medium text-center shadow-sm hover:bg-[#006664] transition-all transform active:scale-95">
+                Book Initial Consultation
+              </a>
+              <a href="#contact" class="border border-[#007e7c] text-[#007e7c] px-6 py-3 rounded-full text-sm font-medium text-center hover:bg-[#dee8e9]/30 transition-all">
+                Check Availability
+              </a>
+            </div>
+
+            <!-- Trust Badges (clean editorial text pills, no icons or emojis) -->
+            <div class="flex flex-wrap items-center gap-2.5 text-xs text-[#121c1d]">
+              <span class="inline-flex items-center bg-[#f7faf9] border border-[#dee8e9] px-3.5 py-1.5 rounded-full text-[#4a5e5d]">
+                Private log cabin studio in Clements End
+              </span>
+              <span class="inline-flex items-center bg-[#f7faf9] border border-[#dee8e9] px-3.5 py-1.5 rounded-full text-[#4a5e5d]">
+                20+ years of therapeutic experience
+              </span>
+              <span class="inline-flex items-center bg-[#f7faf9] border border-[#dee8e9] px-3.5 py-1.5 rounded-full text-[#4a5e5d]">
+                Re-Vision trained · Post-Graduate Diploma
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Tall Woodland Image & Floating Confidentiality Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-soft border border-[#dee8e9]">
+              <!-- Tall portrait-oriented image of an English forest path bathed in soft sunlight -->
+              <img 
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80" 
+                alt="Sunlight filtering through the serene woodland trees in the Forest of Dean" 
+                class="w-full h-[480px] sm:h-[540px] lg:h-[580px] object-cover object-center"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#121c1d]/60 via-transparent to-transparent pointer-events-none"></div>
+
+              <!-- Overlaid floating card: clean typography with subtle teal left border -->
+              <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-[#dee8e9] border-l-4 border-l-[#007e7c]">
+                <p class="text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1">Confidential &amp; Grounded</p>
+                <p class="text-xs sm:text-sm text-[#4a5e5d] leading-relaxed">
+                  Confidential, unhurried sessions, 50 therapeutic minutes just for you.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: HOW IT WORKS (SOFT LINEN BG #f7faf9)                           -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#f7faf9] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/80" id="how-it-works">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            How Therapy Works at Soulful Therapy
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+            Taking the first step, made simple
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            Reaching out is often the hardest part. Here is exactly what happens next, three small, unhurried steps.
+          </p>
+        </div>
+
+        <!-- 3 White Cards: Serif Editorial Numbers 01, 02, 03 (No AI Squircle Boxes) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl border border-[#dee8e9]/80 p-7 sm:p-8 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">01.</span>
+              <span class="text-xs text-[#718584] tracking-wider uppercase font-semibold block mb-1">STEP 1</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Send a confidential message</h3>
+              <p class="text-sm text-[#4a5e5d] leading-relaxed">
+                Tell me a little about what brings you here, as much or as little as you like. Your message comes straight to me, in confidence, and I will always reply personally.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl border border-[#dee8e9]/80 p-7 sm:p-8 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">02.</span>
+              <span class="text-xs text-[#718584] tracking-wider uppercase font-semibold block mb-1">STEP 2</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">A gentle 15-minute intro call</h3>
+              <p class="text-sm text-[#4a5e5d] leading-relaxed">
+                We speak briefly on the phone. There's no pressure and nothing to prepare, just a chance to see whether we feel like a good fit, and to answer any questions you have.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl border border-[#dee8e9]/80 p-7 sm:p-8 relative shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-2xl italic text-[#007e7c] mb-3 block">03.</span>
+              <span class="text-xs text-[#718584] tracking-wider uppercase font-semibold block mb-1">STEP 3</span>
+              <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Your first session</h3>
+              <p class="text-sm text-[#4a5e5d] leading-relaxed">
+                We meet for a full 50-minute session, in the calm of my private log cabin studio near Coleford, or online if that suits you better. From there, we go at your pace.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Center Button -->
+        <div class="text-center mt-12">
+          <a href="#contact" class="bg-[#007e7c] text-white px-7 py-3 rounded-full text-sm font-medium inline-block shadow-sm hover:bg-[#006664] transition-all transform active:scale-95">
+            Start with a confidential message
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: ISSUES & SPECIALITIES (WHITE BG #ffffff)                       -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/60" id="support-for">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            Issues &amp; specialities
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+            What Brings People to Integrative Therapy
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            There is no "too small" or "too much" in therapy. These are some of the things people bring to our work together.
+          </p>
+        </div>
+
+        <!-- 4 Clean High-Breathing-Room Cards (Subtle 1px border #dee8e9, Lora Serif text-xl, No Icon Boxes) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          
+          <!-- Card 1: Feeling anxious or depressed -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 sm:p-9 shadow-sm hover:shadow-md transition-all duration-300">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Feeling anxious or depressed</h3>
+            <p class="text-sm sm:text-[15px] text-[#4a5e5d] leading-relaxed">
+              If you're feeling fearful, worried, anxious, sad or angry, we can gently untangle what sits beneath it, and find steadier ground.
+            </p>
+          </div>
+
+          <!-- Card 2: Coping with trauma or PTSD -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 sm:p-9 shadow-sm hover:shadow-md transition-all duration-300">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Coping with trauma or PTSD</h3>
+            <p class="text-sm sm:text-[15px] text-[#4a5e5d] leading-relaxed">
+              Tell me a little about what brings you here, as much or as little as you like. Your message comes straight to me, in confidence, and I will always reply personally.
+            </p>
+          </div>
+
+          <!-- Card 3: Relationship hurdles -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 sm:p-9 shadow-sm hover:shadow-md transition-all duration-300">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Relationship hurdles</h3>
+            <p class="text-sm sm:text-[15px] text-[#4a5e5d] leading-relaxed">
+              Difficult family members, partners, or the weight of stigma, we make space to understand the patterns and find new ways forward.
+            </p>
+          </div>
+
+          <!-- Card 4: Navigating grief or life transitions -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-8 sm:p-9 shadow-sm hover:shadow-md transition-all duration-300">
+            <h3 class="font-serif text-xl font-semibold text-[#121c1d] mb-3">Navigating grief or life transitions</h3>
+            <p class="text-sm sm:text-[15px] text-[#4a5e5d] leading-relaxed">
+              Bereavement, loss of meaning, or big changes: we give the feelings room to be expressed, honoured and integrated.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Dark Spruce Capsule Banner (#121c1d text-white) -->
+        <div class="bg-[#121c1d] text-white rounded-2xl p-8 sm:p-10 mt-10 text-center shadow-lg border border-[#2b3d3f]">
+          <p class="text-sm sm:text-base font-medium leading-relaxed max-w-4xl mx-auto text-[#dee8e9]">
+            Stress and anxiety · Depression · Relationship issues · Loss of life meaning · Bereavement &amp; loss · Sexuality · Childhood-related issues · Sadness and grief · Low self-esteem · Suicidal thoughts · Problem drinking
+          </p>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 font-normal">
+            Working with adults, and with young people over 16.
+          </p>
+          <div class="mt-5">
+            <a href="#contact" class="bg-[#007e7c] text-white px-6 py-2.5 rounded-full text-sm font-medium inline-block hover:bg-[#009d9a] transition-all transform active:scale-95 shadow-sm">
+              Not sure if this fits? Ask me
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: ABOUT CAROLINE (SOFT LINEN BG #f7faf9)                         -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#f7faf9] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/80" id="about">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          
+          <!-- Left Column: Portrait & Editorial Credentials -->
+          <div class="lg:col-span-5 flex flex-col">
+            <!-- Portrait Container -->
+            <div class="rounded-3xl overflow-hidden shadow-soft border border-[#dee8e9] bg-white p-2">
+              <img 
+                src="caroline-portrait.jpg" 
+                alt="Caroline Vieira - Integrative Psychotherapist" 
+                class="w-full h-[400px] sm:h-[460px] object-cover object-top rounded-2xl"
+                onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80'"
+              />
+            </div>
+
+            <!-- 3 Editorial Credentials (Clean Border-Left Accents, No Icon Squircles) -->
+            <div class="mt-6 space-y-4 bg-white border border-[#dee8e9] rounded-2xl p-6 shadow-sm">
+              <div class="border-l-2 border-[#007e7c] pl-4">
+                <span class="font-semibold block text-sm text-[#121c1d]">Post-Graduate Diploma in Integrative Psychosynthesis</span>
+                <span class="text-xs text-[#4a5e5d]">Re-Vision, London · 1999–2003</span>
+              </div>
+              <div class="border-l-2 border-[#007e7c] pl-4">
+                <span class="font-semibold block text-sm text-[#121c1d]">Training in Psychotherapy from a Soulful Perspective</span>
+                <span class="text-xs text-[#4a5e5d]">Re-Vision, London · 2017–2019</span>
+              </div>
+              <div class="border-l-2 border-[#007e7c] pl-4">
+                <span class="font-semibold block text-sm text-[#121c1d]">Led the counselling service at Hartpury College &amp; University</span>
+                <span class="text-xs text-[#4a5e5d]">15 years supporting young people · 2007–2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative, Quote Callout, Soulful Perspective -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+              About Caroline Vieira, Integrative Transpersonal Therapist
+            </p>
+
+            <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-5 leading-tight">
+              Therapy that listens to the soul, not just the symptoms
+            </h2>
+
+            <p class="text-base sm:text-[17px] text-[#4a5e5d] leading-relaxed mb-6">
+              With over two decades in the field, I practise integrative, transpersonal therapy that blends conventional therapeutic thinking with creative approaches, visualisation, drawing and enactment, so you can include all of yourself, safely and with care.
+            </p>
+
+            <!-- Quote Callout -->
+            <div class="bg-[#dee8e9]/50 border-l-4 border-[#007e7c] p-5 sm:p-6 rounded-r-xl my-4">
+              <blockquote class="font-serif italic text-base sm:text-lg text-[#121c1d] leading-relaxed">
+                "The care of the soul adds depth and meaning to everyday life, with heart, warmth, connections, intelligence and vision."
+              </blockquote>
+              <cite class="block font-sans not-italic text-xs font-semibold text-[#007e7c] mt-2 uppercase tracking-wider">
+                — Thomas Moore
+              </cite>
+            </div>
+
+            <p class="text-base sm:text-[17px] text-[#4a5e5d] leading-relaxed mt-4">
+              I am inspired by Thomas Moore and James Hillman's soulful perspective. The soul speaks in images: you may say you feel 'in a fog', 'bogged down', or like you're 'at the bottom of a well'. We pay attention to those images, and to dreams, because that is where your inner life shows itself. And if words are hard, you don't have to use them, I keep paper, paints and colours in the studio... Above all, my work rests on relationality: the way we meet and relate is where we meet ourselves, and where healing takes place.
+            </p>
+
+            <div class="mt-8 flex items-center gap-4">
+              <a href="about-caroline.html" class="inline-flex items-center gap-2 text-sm font-medium text-[#007e7c] hover:underline">
+                <span>Read Caroline's full background &amp; story</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 6: THE CABIN STUDIO (WHITE BG #ffffff)                            -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/60" id="the-studio">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+            The Therapy Studio Near Coleford, Forest of Dean
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+            A warm, private log cabin, just for you
+          </h2>
+          <p class="text-base text-[#4a5e5d] leading-relaxed">
+            My studio is a comfortable, self-contained log cabin in the Forest of Dean: soft lamps, books, paints and paper, and nothing to rush back to. It is a space that belongs to the hour alone.
+          </p>
+        </div>
+
+        <!-- Large Panoramic Photo of the Log Cabin Interior -->
+        <div class="rounded-3xl overflow-hidden shadow-soft border border-[#dee8e9] mb-10 relative">
+          <img 
+            src="cabin-interior.jpg" 
+            alt="Warm log cabin psychotherapy studio in Clements End, Forest of Dean" 
+            class="w-full h-[380px] sm:h-[480px] lg:h-[540px] object-cover object-center"
+            onerror="this.src='cabin-studio-2.jpg'"
+          />
+          <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl border border-[#dee8e9] text-xs font-medium text-[#121c1d] shadow-sm">
+            Private woodland cabin interior · Clements End, Coleford
+          </div>
+        </div>
+
+        <!-- 4 Clean Editorial Feature Cards (No Emojis or Squircles) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Feature 1: The location -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+            <span class="text-xs uppercase tracking-widest text-[#007e7c] font-semibold block mb-2">Location</span>
+            <h3 class="font-serif text-lg font-semibold text-[#121c1d] mb-2">The Studio</h3>
+            <p class="text-xs sm:text-sm text-[#4a5e5d] leading-relaxed">
+              Clements End, Nr Coleford, GL16 8LL, a private, dedicated therapy studio, easily reached from the B4228 between Chepstow and Coleford.
+            </p>
+          </div>
+
+          <!-- Feature 2: Appointment days -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+            <span class="text-xs uppercase tracking-widest text-[#007e7c] font-semibold block mb-2">Schedule</span>
+            <h3 class="font-serif text-lg font-semibold text-[#121c1d] mb-2">Appointment Days</h3>
+            <p class="text-xs sm:text-sm text-[#4a5e5d] leading-relaxed">
+              Sessions on Tuesdays, Wednesdays and Thursdays, with the last session of the day beginning at 5.30pm.
+            </p>
+          </div>
+
+          <!-- Feature 3: Easy parking -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+            <span class="text-xs uppercase tracking-widest text-[#007e7c] font-semibold block mb-2">Accessibility</span>
+            <h3 class="font-serif text-lg font-semibold text-[#121c1d] mb-2">Easy Parking</h3>
+            <p class="text-xs sm:text-sm text-[#4a5e5d] leading-relaxed">
+              There is parking on the grass verge right beside the cabin, arrive quietly and settle in.
+            </p>
+          </div>
+
+          <!-- Feature 4: Online too -->
+          <div class="bg-white border border-[#dee8e9] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+            <span class="text-xs uppercase tracking-widest text-[#007e7c] font-semibold block mb-2">Remote Care</span>
+            <h3 class="font-serif text-lg font-semibold text-[#121c1d] mb-2">Online Sessions</h3>
+            <p class="text-xs sm:text-sm text-[#4a5e5d] leading-relaxed">
+              If travel is difficult, sessions can take place online at the usual session fee of £54.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Banner Strip -->
+        <div class="bg-[#dee8e9]/50 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row justify-between items-center mt-8 gap-4 border border-[#dee8e9]">
+          <p class="text-sm text-[#121c1d] font-medium leading-relaxed">
+            Tuesdays, Wednesdays and Thursdays fill up first. If you'd like a space, the easiest next step is to send a short confidential message.
+          </p>
+          <a href="#contact" class="bg-[#007e7c] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#006664] transition-all shadow-sm shrink-0">
+            Check Availability
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 7: CLIENT STORIES (DARK SPRUCE BG #121c1d TEXT-WHITE)             -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#121c1d] text-white py-16 sm:py-20 lg:py-24 border-b border-[#2b3d3f]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-xs font-sans font-medium text-[#dee8e9] tracking-widest uppercase mb-2">
+            Client Experiences
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-3">
+            Kind words from past clients
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300">
+            Shared with permission; names and details are always kept private.
+          </p>
+        </div>
+
+        <!-- Testimonial Card (Clean Editorial Typography, No Giant SVG Icons) -->
+        <div class="bg-[#1c292b] border border-[#2b3d3f] rounded-2xl p-8 sm:p-10 max-w-3xl mx-auto shadow-2xl relative">
+          
+          <div class="mb-5">
+            <span class="bg-[#007e7c]/30 text-[#dee8e9] border border-[#007e7c]/40 text-xs px-3.5 py-1 rounded-full font-medium inline-block">
+              Finding the right fit
+            </span>
+          </div>
+
+          <blockquote class="font-serif italic text-base sm:text-lg text-white leading-relaxed mb-6">
+            "I had tried counselling before and thought it wasn't for me. I now realise that finding the right counsellor makes all the difference. I went to see Caroline when I felt I was no longer able to cope and everything in my life was going wrong... I feel in control, grounded and confident in all parts of my life and most importantly, I feel capable of moving forward in my life. My only regret is that I hadn't found Caroline sooner."
+          </blockquote>
+
+          <div class="pt-4 border-t border-[#2b3d3f] flex items-center justify-between">
+            <span class="text-sm font-sans text-[#dee8e9] font-medium">— Client testimonial</span>
+            <span class="text-xs text-slate-400">Forest of Dean Practice</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 8: FAQS (WHITE BG #ffffff)                                        -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#ffffff] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]/60" id="faqs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-5">
+            <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+              Frequently Asked Questions
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+              Answers to common questions
+            </h2>
+            <p class="text-base text-[#4a5e5d] leading-relaxed mb-6">
+              If your question isn't answered here, you're always welcome to email me, no question is too small.
+            </p>
+
+            <div class="bg-[#f7faf9] border border-[#dee8e9] rounded-2xl p-5 mb-6">
+              <p class="text-xs font-semibold text-[#121c1d] mb-1">Looking for our complete fee structure?</p>
+              <p class="text-xs text-[#4a5e5d] mb-3">Explore our dedicated fees &amp; transparent guidance page.</p>
+              <a href="fees-faqs.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#007e7c] hover:underline">
+                <span>View Full Fees &amp; FAQs Page</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+
+            <a href="#contact" class="inline-block bg-[#007e7c] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#006664] transition">
+              Ask Caroline a Question
+            </a>
+          </div>
+
+          <!-- Right Column: Accordion List with Thin Dividers -->
+          <div class="lg:col-span-7 divide-y divide-[#dee8e9]">
+            
+            <!-- Item 1 -->
+            <div class="faq-item py-4 active">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>When are you available?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Sessions are offered on Tuesdays, Wednesdays, and Thursdays, with daytime and early evening appointments (last appointment begins at 5:30pm).</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>Is everything I share confidential?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Yes, completely. Confidentiality is the foundation of our work together. Everything you share remains strictly confidential in accordance with the BACP Ethical Framework.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>How long are sessions, and how many will I need?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Sessions last a full 50 therapeutic minutes. Therapy can be short-term and focused (typically 6–12 sessions) or open-ended, allowing for deeper exploration. We review our work regularly so you remain in complete control.</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>What are the fees?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Sessions are £54 per 50-minute session. Payment is made by simple bank transfer. I also offer a free 15-minute introductory telephone consultation before you commit to your first session.</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>Do you offer a sliding scale?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Yes, I offer a limited number of concessionary spaces for students, counselling trainees, or individuals on lower incomes. Please ask about this during our initial telephone conversation in confidence.</p>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>What happens in the first session?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>Our first session is a gentle, unhurried space to explore what has brought you to therapy, what you hope to get out of it, and how we might work together. There are no expectations or tests; we go at whatever pace feels comfortable for you.</p>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="faq-item py-4">
+              <button class="faq-trigger w-full flex items-center justify-between text-left py-2 font-serif text-lg font-semibold text-[#121c1d] focus:outline-none">
+                <span>Where will I find you?</span>
+                <svg class="faq-chevron w-5 h-5 text-[#4a5e5d] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content text-sm text-[#4a5e5d] leading-relaxed pt-2">
+                <p>The practice is based in a private log cabin studio in Clements End, near Coleford in the Forest of Dean (GL16 8LL). It is easily accessible from Chepstow, Monmouth, Lydney, and Gloucester, with free grass-verge parking right outside.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 9: CONTACT & ENQUIRY (SOFT LINEN BG #f7faf9)                      -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#f7faf9] py-16 sm:py-20 lg:py-24 border-b border-[#dee8e9]" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          
+          <!-- Left Column: Details (Clean Typography, No Icon Boxes) -->
+          <div class="lg:col-span-5">
+            <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+              Contact Caroline Vieira - Therapist in Coleford
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-[#121c1d] tracking-tight mb-4">
+              A first message is all it takes
+            </h2>
+            <p class="text-base text-[#4a5e5d] leading-relaxed mb-8">
+              You're welcome to share as much or as little as you like. Every message comes directly to me Caroline, and I reply personally, in confidence.
+            </p>
+
+            <!-- Direct Contact Details: Quiet, High-Breathing-Room Layout -->
+            <div class="space-y-6 bg-white border border-[#dee8e9] rounded-2xl p-7 shadow-sm">
+              
+              <!-- Email -->
+              <div class="border-b border-[#dee8e9]/70 pb-4">
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">Email Me Directly</span>
+                <a href="mailto:caroline.vieira108@gmail.com" class="text-sm sm:text-base font-medium text-[#121c1d] hover:text-[#007e7c] transition break-all">
+                  caroline.vieira108@gmail.com
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div class="border-b border-[#dee8e9]/70 pb-4">
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">The Studio</span>
+                <p class="text-sm text-[#121c1d] leading-relaxed">
+                  Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+                </p>
+              </div>
+
+              <!-- Sessions -->
+              <div>
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">Sessions &amp; Fees</span>
+                <p class="text-sm text-[#121c1d] leading-relaxed">
+                  Tuesdays, Wednesdays &amp; Thursdays · £54 per counselling hour · Free 15-minute intro call
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column: Floating White Form Card -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-[#dee8e9]">
+              
+              <h3 class="text-2xl font-serif font-semibold text-[#121c1d] mb-2">Send a confidential note</h3>
+              <p class="text-xs sm:text-sm text-[#4a5e5d] mb-6">Take your time. There is no obligation, and no question is too minor.</p>
+
+              <form id="contact-form" class="space-y-4">
+                
+                <!-- Name Field -->
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Your Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Sarah"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Email Address *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="sarah@example.co.uk"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Phone (optional) -->
+                <div>
+                  <label for="phone" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Phone (optional)
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="07123 456789"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Textarea -->
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    A little about what brings you here *
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    required 
+                    placeholder="Feel free to share what you are experiencing or any questions you have about starting therapy..."
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-[#007e7c] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[#006664] transition-all transform active:scale-95 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:ring-offset-2"
+                >
+                  Send my confidential message
+                </button>
+
+                <!-- Reassurance Note -->
+                <p class="text-xs text-center text-[#718584] mt-3">
+                  Your message is sent privately to Caroline and never shared.
+                </p>
+
+                <!-- Feedback banner (hidden by default) -->
+                <div id="form-feedback" class="hidden p-4 rounded-xl bg-[#dee8e9] text-[#007e7c] text-xs font-medium text-center">
+                  Thank you. Your message has been received in confidence. Caroline will be in touch shortly.
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- EXACT FOOTER FROM forestofdeancounselling.co.uk (Dark Spruce #121c1d)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#121c1d] text-center py-16 px-6 border-t border-[#1e2d2e]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center gap-4">
+      <!-- Header-matching Logo & Brand Lockup -->
+      <a href="index.html" class="inline-flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1 mb-1">
+        <img src="logo.png" alt="Soulful Therapy - Caroline Vieira" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div class="flex flex-col text-left leading-tight">
+          <span class="font-sans text-xs font-semibold tracking-wider text-white uppercase">CAROLINE VIEIRA</span>
+          <span class="font-sans text-[10px] tracking-widest text-[#8e9293] uppercase">FOREST OF DEAN</span>
+        </div>
+      </a>
+
+      <!-- Site Title -->
+      <p class="font-serif text-[21px] text-white tracking-wide">
+        <a href="index.html" class="hover:text-[#dee8e9] transition-colors">Soulful Therapy</a>
+      </p>
+
+      <!-- Practice Credentials & Address -->
+      <p class="text-sm text-[#8e9293] leading-relaxed max-w-2xl font-normal">
+        Soulful Therapy · Caroline Vieira, Integrative Transpersonal Psychotherapist · Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+      </p>
+
+      <!-- Email Link -->
+      <p class="text-sm">
+        <a href="mailto:caroline.vieira108@gmail.com" class="text-white underline hover:text-[#dee8e9] transition-colors">
+          caroline.vieira108@gmail.com
+        </a>
+      </p>
+
+      <!-- Copyright -->
+      <p class="text-sm text-[#8e9293] pt-2">
+        © 2026 Soulful Therapy. Integrative transpersonal psychotherapy in Coleford and the Forest of Dean.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-trigger').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+        });
+
+        // Toggle clicked item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Contact form feedback
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (formFeedback) {
+          formFeedback.classList.remove('hidden');
+          contactForm.reset();
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

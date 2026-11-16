@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Check Availability | Caroline Vieira · Soulful Therapy</title>
+  <meta name="description" content="Get in touch with Caroline Vieira to check availability for 1-to-1 counselling in the Clements End log cabin studio or online. Free 15-minute phone consultation.">
+
+  <!-- Google Fonts: Lora & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007e7c',
+            'primary-dark': '#006664',
+            'primary-light': '#009d9a',
+            tint: '#dee8e9',
+            secondary: '#dee8e9',
+            spruce: '#121c1d',
+            linen: '#f7faf9',
+            cream: '#f7faf9',
+            charcoal: '#121c1d',
+            slate: '#4a5e5d',
+            muted: '#718584'
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          borderRadius: {
+            'card': '20px',
+            '2xl': '16px',
+            '3xl': '24px'
+          },
+          boxShadow: {
+            'soft': '0 12px 35px -8px rgba(18, 28, 29, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #4a5e5d;
+      background-color: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: #121c1d;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7faf9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dee8e9;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #007e7c;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#007e7c]/20 selection:text-[#121c1d]" id="top">
+
+  <!-- ========================================================================= -->
+  <!-- FIXED NAVIGATION BAR (No Dropdown, No Layout Shifts)                       -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white border-b border-[#dee8e9] transition-all duration-300 shadow-sm" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: Logo & Two-Line Brand Text -->
+        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1">
+          <img src="logo.png" alt="Soulful Therapy Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <div class="flex flex-col leading-tight">
+            <span class="font-sans text-xs font-semibold tracking-wider text-[#121c1d] uppercase">CAROLINE VIEIRA</span>
+            <span class="font-sans text-[10px] tracking-widest text-[#4a5e5d] uppercase">FOREST OF DEAN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links: direct links, font-weight 500, whitespace-nowrap, no dropdown -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-sans text-sm font-medium whitespace-nowrap" aria-label="Main Navigation">
+          <a href="index.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Home</a>
+          <a href="counselling-services.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Services</a>
+          <a href="about-caroline.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">About Caroline</a>
+          <a href="the-cabin-studio.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">The Studio</a>
+          <a href="fees-faqs.html" class="border-b-2 border-transparent text-[#121c1d] hover:text-[#007e7c] pb-1 whitespace-nowrap transition-colors">Fees &amp; FAQs</a>
+        </nav>
+
+        <!-- Right CTA: Rounded Solid Teal Pill Button pointing directly to contact.html -->
+        <div class="hidden sm:flex items-center">
+          <a href="contact.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-[#007e7c] text-white hover:bg-[#006866] transition-colors whitespace-nowrap shadow-sm">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-[#121c1d] hover:bg-[#f7faf9] border border-[#dee8e9] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#dee8e9] bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Home</a>
+      <a href="counselling-services.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Services</a>
+      <a href="about-caroline.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">About Caroline</a>
+      <a href="the-cabin-studio.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">The Studio</a>
+      <a href="fees-faqs.html" class="block py-2 text-sm font-medium text-[#121c1d] hover:text-[#007e7c] pl-2">Fees &amp; FAQs</a>
+      <div class="pt-3">
+        <a href="contact.html" class="block text-center bg-[#007e7c] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#006866] transition-colors">Check Availability</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex-grow">
+
+    <!-- ========================================================================= -->
+    <!-- CONTACT & ENQUIRY SECTION                                                 -->
+    <!-- ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#f7faf9] border-b border-[#dee8e9]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          
+          <!-- Left Column: Guidance & Direct Details -->
+          <div class="lg:col-span-5">
+            <p class="text-xs font-sans font-semibold text-[#007e7c] tracking-wider uppercase mb-2">
+              Confidential Enquiry &amp; Availability
+            </p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#121c1d] tracking-tight leading-tight mb-4">
+              A first message is all it takes
+            </h1>
+            <p class="text-base text-[#4a5e5d] leading-relaxed mb-8">
+              You are welcome to share as much or as little as you feel comfortable with. Every message comes directly to me, Caroline, and I reply personally and in strict confidence.
+            </p>
+
+            <!-- Direct Contact Details -->
+            <div class="space-y-6 bg-white border border-[#dee8e9] rounded-2xl p-7 shadow-sm mb-6">
+              
+              <!-- Email -->
+              <div class="border-b border-[#dee8e9]/70 pb-4">
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">Email Me Directly</span>
+                <a href="mailto:caroline.vieira108@gmail.com" class="text-sm sm:text-base font-medium text-[#121c1d] hover:text-[#007e7c] transition break-all">
+                  caroline.vieira108@gmail.com
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div class="border-b border-[#dee8e9]/70 pb-4">
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">The Studio</span>
+                <p class="text-sm text-[#121c1d] leading-relaxed">
+                  Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+                </p>
+              </div>
+
+              <!-- Sessions & Fees -->
+              <div>
+                <span class="text-xs text-[#007e7c] uppercase tracking-wider block font-semibold mb-1">Sessions &amp; Fees</span>
+                <p class="text-sm text-[#121c1d] leading-relaxed">
+                  Tuesdays, Wednesdays &amp; Thursdays · £54 per counselling hour · Free 15-minute phone intro call
+                </p>
+              </div>
+
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-[#dee8e9] text-xs text-[#718584] leading-relaxed">
+              <span class="font-semibold text-[#121c1d] block mb-1">What to expect after you write:</span>
+              I will respond within 24 to 48 hours to answer any questions and arrange a quiet, zero-pressure 15-minute telephone conversation to see if working together feels right.
+            </div>
+
+          </div>
+
+          <!-- Right Column: Floating White Form Card -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-[#dee8e9]">
+              
+              <h2 class="text-2xl font-serif font-semibold text-[#121c1d] mb-2">Send Caroline a confidential note</h2>
+              <p class="text-xs sm:text-sm text-[#4a5e5d] mb-6">Take your time. There is no obligation, and no question is too minor.</p>
+
+              <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmission(event)">
+                
+                <!-- Feedback message -->
+                <div id="form-feedback" class="hidden p-4 rounded-xl bg-[#dee8e9] text-[#007e7c] text-xs font-medium text-center">
+                  Thank you. Your message has been received with complete confidentiality. Caroline will reply personally within 24–48 hours.
+                </div>
+
+                <!-- Name Field -->
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Your Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Sarah"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Email Address *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="sarah@example.co.uk"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Phone (optional) -->
+                <div>
+                  <label for="phone" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    Phone Number (optional)
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="07123 456789"
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition"
+                  />
+                </div>
+
+                <!-- Textarea -->
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-[#121c1d] uppercase tracking-wider mb-1.5">
+                    A little about what brings you here *
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required 
+                    placeholder="Feel free to share what you are experiencing, whether you prefer in-person sessions at the cabin or online, or any questions you have about starting therapy..."
+                    class="w-full px-4 py-3 rounded-xl border border-[#dee8e9] text-sm text-[#121c1d] focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:border-transparent transition resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-[#007e7c] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[#006866] transition-all transform active:scale-95 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#007e7c] focus:ring-offset-2"
+                >
+                  Send my confidential message
+                </button>
+
+                <!-- Reassurance Note -->
+                <p class="text-xs text-center text-[#718584] mt-3">
+                  Your message is sent privately to Caroline and never shared.
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- EXACT FOOTER FROM forestofdeancounselling.co.uk (Dark Spruce #121c1d)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#121c1d] text-center py-16 px-6 border-t border-[#1e2d2e]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center gap-4">
+      <!-- Header-matching Logo & Brand Lockup -->
+      <a href="index.html" class="inline-flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007e7c] rounded-lg py-1 mb-1">
+        <img src="logo.png" alt="Soulful Therapy - Caroline Vieira" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div class="flex flex-col text-left leading-tight">
+          <span class="font-sans text-xs font-semibold tracking-wider text-white uppercase">CAROLINE VIEIRA</span>
+          <span class="font-sans text-[10px] tracking-widest text-[#8e9293] uppercase">FOREST OF DEAN</span>
+        </div>
+      </a>
+
+      <!-- Site Title -->
+      <p class="font-serif text-[21px] text-white tracking-wide">
+        <a href="index.html" class="hover:text-[#dee8e9] transition-colors">Soulful Therapy</a>
+      </p>
+
+      <!-- Practice Credentials & Address -->
+      <p class="text-sm text-[#8e9293] leading-relaxed max-w-2xl font-normal">
+        Soulful Therapy · Caroline Vieira, Integrative Transpersonal Psychotherapist · Clements End, Nr Coleford, GL16 8LL, Forest of Dean, Gloucestershire
+      </p>
+
+      <!-- Email Link -->
+      <p class="text-sm">
+        <a href="mailto:caroline.vieira108@gmail.com" class="text-white underline hover:text-[#dee8e9] transition-colors">
+          caroline.vieira108@gmail.com
+        </a>
+      </p>
+
+      <!-- Copyright -->
+      <p class="text-sm text-[#8e9293] pt-2">
+        © 2026 Soulful Therapy. Integrative transpersonal psychotherapy in Coleford and the Forest of Dean.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    function handleFormSubmission(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const form = document.getElementById('contact-form');
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        form.reset();
+      }
+    }
+  </script>
+
+</body>
+</html>

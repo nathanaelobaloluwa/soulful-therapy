@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Soulful Therapy — Brand Design System & Tokens
+   Client: Caroline Vieira (Integrative & Soul-Centred Psychotherapist)
+   Location: Clements End, Forest of Dean, Gloucestershire
+   ========================================================================== */
+
+:root {
+  /* Visual Tokens */
+  --color-white: #ffffff;
+  --color-cream: #f2f7f7;          /* Soft cream tint */
+  --color-spruce: #121c1d;         /* Dark spruce for contact & deep headings */
+  --color-primary: #007e7c;        /* Deep Teal */
+  --color-primary-dark: #006664;
+  --color-primary-light: #009d9a;
+  --color-secondary: #dee8e9;      /* Border & tag tint */
+  --color-charcoal: #1c2826;
+  --color-charcoal-muted: #4b5e5c;
+
+  /* Typography */
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii & Shadows */
+  --radius-card: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 12px 35px -8px rgba(18, 28, 29, 0.08);
+  --shadow-card: 0 10px 30px -5px rgba(0, 126, 124, 0.06), 0 4px 12px -2px rgba(18, 28, 29, 0.03);
+  --shadow-card-hover: 0 18px 40px -10px rgba(0, 126, 124, 0.15);
+  --shadow-spruce-glow: 0 25px 65px -15px rgba(18, 28, 29, 0.55), 0 0 0 1px rgba(0, 126, 124, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-spruce);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+/* Accessibility Focus States */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
